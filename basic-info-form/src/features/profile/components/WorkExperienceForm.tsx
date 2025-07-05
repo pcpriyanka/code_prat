@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-
-const experienceYears = Array.from({ length: 6 }, (_, i) => `${i} Year${i === 1 ? '' : 's'}`);
-const experienceMonths = Array.from({ length: 12 }, (_, i) => `${i} Month${i === 1 ? '' : 's'}`);
-const years = Array.from({ length: 6 }, (_, i) => (2025 - i).toString());
-const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
 import { useAppDispatch, useAppSelector } from '../../../app/hooks';
 import { setField } from '../profileSlice';
+
+const experienceYears = Array.from({ length: 25 }, (_, i) => `${i} Year${i === 1 ? '' : 's'}`);
+const experienceMonths = Array.from({ length: 12 }, (_, i) => `${i} Month${i === 1 ? '' : 's'}`);
+const years = Array.from({ length: 30 }, (_, i) => (2025 - i).toString());
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+
 
 export const WorkExperienceForm: React.FC<{
   onBack: () => void;
@@ -166,8 +167,13 @@ export const WorkExperienceForm: React.FC<{
             </div>
           </div>
           {/* Company and job title */}
-          <div style={{ display: 'flex', gap: 16, marginBottom: 24 }}>
-            <div style={{ flex: 1 }}>
+          {/* <div style={{ display: 'flex', gap: 20, marginBottom: 24 }}> */}
+            <div style={{ display: 'flex',
+  flexWrap: 'wrap',
+  gap: '30px',
+  marginBottom: 24,
+  alignItems: 'center' }}>
+            <div style={{ flex: 1}}>
               <label>Current company name<span style={{ color: 'red' }}>*</span></label>
               <input
                 type="text"

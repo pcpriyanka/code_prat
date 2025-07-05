@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { useAppDispatch } from '../../../app/hooks';
+import { setField } from '../profileSlice';
 
 const degreeOptions = [
   'B.Tech', 'M.Tech', 'B.Sc', 'M.Sc', 'B.Com', 'M.Com', 'B.A', 'M.A', 'PhD', 'Diploma', 'Other'
 ];
 const years = Array.from({ length: 30 }, (_, i) => (2025 - i).toString());
 
-import { useAppDispatch } from '../../../app/hooks';
-import { setField } from '../profileSlice';
+
 
 // Accept currentStep and completedSteps as props for stepper control
 export const EducationForm: React.FC<{

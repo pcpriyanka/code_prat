@@ -6,12 +6,68 @@ import { PhoneInput } from './PhoneInput';
 import { DateInput } from './DateInput';
 import { Tooltip } from './Tooltip';
 
-const stateOptions = ['Select', 'Gujarat', 'Delhi', 'Maharashtra'];
+const stateOptions = [
+  "Andhra Pradesh",
+  "Arunachal Pradesh",
+  "Assam",
+  "Bihar",
+  "Chhattisgarh",
+  "Goa",
+  "Gujarat",
+  "Haryana",
+  "Himachal Pradesh",
+  "Jharkhand",
+  "Karnataka",
+  "Kerala",
+  "Madhya Pradesh",
+  "Maharashtra",
+  "Manipur",
+  "Meghalaya",
+  "Mizoram",
+  "Nagaland",
+  "Odisha",
+  "Punjab",
+  "Rajasthan",
+  "Sikkim",
+  "Tamil Nadu",
+  "Telangana",
+  "Tripura",
+  "Uttar Pradesh",
+  "Uttarakhand",
+  "West Bengal"
+];
 const cityOptions: Record<string, string[]> = {
-  Gujarat: ['Ahmedabad', 'Surat', 'Vadodara'],
-  Delhi: ['New Delhi'],
-  Maharashtra: ['Mumbai', 'Pune'],
+  "Andhra Pradesh": ["Visakhapatnam", "Vijayawada", "Guntur"],
+  "Arunachal Pradesh": ["Itanagar", "Naharlagun", "Tawang"],
+  Assam: ["Guwahati", "Silchar", "Dibrugarh"],
+  Bihar: ["Patna", "Gaya", "Muzaffarpur"],
+  Chhattisgarh: ["Raipur", "Bilaspur", "Durg"],
+  Goa: ["Panaji", "Margao", "Vasco da Gama"],
+  Gujarat: ["Ahmedabad", "Surat", "Vadodara"],
+  Haryana: ["Faridabad", "Gurugram", "Panipat"],
+  "Himachal Pradesh": ["Shimla", "Dharamshala", "Manali"],
+  Jharkhand: ["Ranchi", "Jamshedpur", "Dhanbad"],
+  Karnataka: ["Bengaluru", "Mysuru", "Hubballi"],
+  Kerala: ["Kochi", "Thiruvananthapuram", "Kozhikode"],
+  "Madhya Pradesh": ["Indore", "Bhopal", "Jabalpur"],
+  Maharashtra: ["Mumbai", "Pune", "Nagpur"],
+  Manipur: ["Imphal", "Thoubal", "Bishnupur"],
+  Meghalaya: ["Shillong", "Tura", "Nongstoin"],
+  Mizoram: ["Aizawl", "Lunglei", "Champhai"],
+  Nagaland: ["Kohima", "Dimapur", "Mokokchung"],
+  Odisha: ["Bhubaneswar", "Cuttack", "Rourkela"],
+  Punjab: ["Amritsar", "Ludhiana", "Jalandhar"],
+  Rajasthan: ["Jaipur", "Jodhpur", "Udaipur"],
+  Sikkim: ["Gangtok", "Namchi", "Mangan"],
+  "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai"],
+  Telangana: ["Hyderabad", "Warangal", "Nizamabad"],
+  Tripura: ["Agartala", "Dharmanagar", "Udaipur"],
+  "Uttar Pradesh": ["Lucknow", "Kanpur", "Varanasi"],
+  Uttarakhand: ["Dehradun", "Haridwar", "Nainital"],
+  "West Bengal": ["Kolkata", "Asansol", "Siliguri"]
+
 };
+
 
 function validateEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
