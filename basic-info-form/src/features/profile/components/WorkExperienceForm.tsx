@@ -261,19 +261,20 @@ export const WorkExperienceForm: React.FC<{
         <button
           type="button"
           style={{
-            background: '#23235b',
+            background: fresher === null ? '#bbb' : '#23235b',
             color: '#fff',
             padding: '10px 40px',
             border: 'none',
             borderRadius: 6,
             fontWeight: 600,
             fontSize: 16,
-            cursor: 'pointer',
+            cursor: fresher === null ? 'not-allowed' : 'pointer',
             marginRight: 80,
             boxShadow: '0 2px 8px #e2e2e9',
             transition: 'background 0.2s',
           }}
           onClick={onNext}
+          disabled={fresher === null}
         >
           Next
         </button>
